@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragments.EditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+
+
+            <EditText
+                android:id="@+id/editTitle"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/edittxtshape"
+                android:fontFamily="@font/merriweathersans_regular"
+                android:hint="Title..."
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+                ></EditText>
+
+            <EditText
+                android:id="@+id/editSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/edittxtshape"
+                android:fontFamily="@font/merriweathersans_regular"
+                android:hint="Subtitle..."
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+
+                android:textStyle="bold"
+
+                ></EditText>
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/pred"
+                    android:src="@drawable/reddot"
+                    android:background="@drawable/reddot"
+                    android:layout_margin="5dp"
+
+
+                    />    <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/porg"
+                android:src="@drawable/orangedot"
+                android:background="@drawable/orangedot"
+                android:layout_margin="5dp"
+
+
+                />    <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/yellowdot"
+                android:id="@+id/pyellow"
+                android:src="@drawable/yellowdot"
+                android:layout_margin="5dp"
+                />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/editNote"
+                android:layout_width="match_parent"
+
+                android:layout_height="350dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/edittxtshape"
+                android:fontFamily="@font/merriweathersans_regular"
+                android:gravity="top"
+                android:hint="Notes..."
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+
+
+                ></EditText>
+
+
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/baseline_check_24"
+            android:id="@+id/AddItButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="blackism">#FF2B2626</color>
+    <color name="textboxcolor">#8D8888</color>
+    <color name="reddot">#FF2525</color>
+    <color name="orangedot">#FF9800</color>
+    <color name="yellowdot">#FFFF00</color>
+    <color name="whitish">#E0DAE2</color>
+
+
+    <color name="white">#FFFFFF</color>
+</resources>
