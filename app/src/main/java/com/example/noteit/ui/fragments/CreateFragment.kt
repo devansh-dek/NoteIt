@@ -4,10 +4,15 @@ import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
@@ -16,6 +21,7 @@ import com.example.noteit.databinding.FragmentCreateBinding
 import com.example.noteit.databinding.FragmentHomeBinding
 import com.example.noteit.datafiles.Notes
 import com.example.noteit.datafiles.ViewModelNotes
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -45,6 +51,7 @@ var priority = 1
         binding = FragmentCreateBinding.inflate(inflater,container,false)
 
 
+        setHasOptionsMenu(true)
 
 
 
@@ -79,6 +86,8 @@ var priority = 1
 
 
         }
+
+
         return binding.root
 
 
@@ -102,4 +111,29 @@ var priority = 1
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()) // You can adjust the format as needed
         return dateFormat.format(calendar.time)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+
+
+            android.R.id.home -> {
+                // Handle the back button press
+                Navigation.findNavController(requireView()!!).navigate(R.id.action_createFragment_to_homeFragment)
+
+                return true
+            }
+
+            else -> return super.onOptionsItemSelected(item)
+
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
 }

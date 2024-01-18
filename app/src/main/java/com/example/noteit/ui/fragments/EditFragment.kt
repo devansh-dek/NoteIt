@@ -142,7 +142,12 @@ bottomSheet.dismiss()
 
             }
 
+            android.R.id.home -> {
+                // Handle the back button press
+                Navigation.findNavController(requireView()!!).navigate(R.id.action_editFragment_to_homeFragment)
 
+                return true
+            }
 
 
 

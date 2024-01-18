@@ -108,8 +108,14 @@ setHasOptionsMenu(true)
 
         }
         val searchVIEW = item.actionView as SearchView
+
         if (searchVIEW != null) {
             searchVIEW.queryHint = "Enter Title/Subtitle"
+
+//            val searchEditText = searchVIEW.findViewById<View>(androidx.appcompat.R.id.search_src_text) as? View
+//
+//            searchEditText?.layoutParams?.width = ViewGroup.LayoutParams.MATCH_PARENT
+
         }
         else{
             Log.e("@@@@@@","searchview is null boi")
